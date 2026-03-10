@@ -18,7 +18,6 @@ return {
       window = {
         mappings = {
           ['CR'] = 'open',
-          ['l'] = 'close',
           ['h'] = 'close_node',
           ['C'] = 'set_root',
           ['u'] = 'navigate_up',
