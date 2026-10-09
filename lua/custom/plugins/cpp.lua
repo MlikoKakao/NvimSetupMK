@@ -9,24 +9,6 @@ return {
     end,
   },
 
-  -- Format with clang-format (Kickstart uses conform.nvim)
-  {
-    'stevearc/conform.nvim',
-    opts = {
-      format_on_save = function(bufnr)
-        local disabled = vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat
-        if disabled then
-          return
-        end
-        return { timeout_ms = 1000, lsp_fallback = true }
-      end,
-      formatters_by_ft = {
-        c = { 'clang_format' },
-        cpp = { 'clang_format' },
-      },
-    },
-  },
-
   -- Debugging (nvim-dap) via gdb
   {
     'mfussenegger/nvim-dap',
