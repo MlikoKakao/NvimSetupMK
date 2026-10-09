@@ -1,14 +1,5 @@
 -- ~/.config/nvim/lua/custom/plugins/cpp.lua
 return {
-  -- Ensure clangd LSP is present
-  {
-    'williamboman/mason-lspconfig.nvim',
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      table.insert(opts.ensure_installed, 'clangd')
-    end,
-  },
-
   -- Treesitter for C/C++
   {
     'nvim-treesitter/nvim-treesitter',
